@@ -1,0 +1,190 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#f{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 19px;
+}
+input{cursor: pointer;}
+#fee>li>span{
+    color: red;
+    text-decoration-line: line-through;
+    text-decoration-color: rgba(255, 217, 0, 0.55);
+}
+img{
+    margin-top: 18px;
+    cursor: pointer;
+}
+body {
+    background: linear-gradient(to right, #0F2027, #203A43, #28414c);
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-size: 80px;
+    color: azure;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 2px 5px white, 3px 3px 5px cyan, 3px 3px 5px burlywood;
+}
+#first {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+#inp {
+    border-style: solid;
+    border-radius: 30px;
+    border-color: darkcyan;
+    border-width: 3.8px;
+    box-shadow: 0px 0px 25px rgb(86, 86, 206);
+    height: 55px;
+    width: 380px;
+    font-size: 30px;
+    padding: 0 15px;
+    color: rgb(8, 8, 94);
+}
+#btn {
+    height: 50px;
+    width: 80px;
+    border-radius: 15px;
+    color: azure;
+    text-shadow: -2px -1.5px 3px black ;
+    font-family: 'Lucida Sans';
+    font-weight: 700;
+    font-size: 25px;
+    background: linear-gradient(violet, rgb(138, 21, 154));
+    box-shadow: 0px 0px 5px palevioletred;
+    cursor: pointer;
+}
+.box {
+    width: 450px;
+    cursor: pointer;
+    height: 280px;
+    border: 2px solid lightskyblue;
+    box-shadow: 0px 0px 20px white;
+    border-radius: 25px;
+    padding: 10px;
+    overflow: auto;
+}
+#second {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+    column-gap: 70px;
+    margin-top: 50px;
+}
+h2 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: whitesmoke;
+    text-shadow: 0px 0px 3px whitesmoke;
+    font-weight: 800;
+}
+#green {
+    box-shadow: 0px 0px 10px greenyellow;
+}
+#green>h2{
+    text-shadow: -2px 2px 3px rgb(18, 100, 194), 2px -2px 3px lime,2px 2px 3px black;
+}
+#red {
+    box-shadow: 0px 0px 10px red;
+}
+#red>h2{
+    text-shadow: -2px 2px 3px orange, 2px -2px 5px red,2px 2px 3px black;
+}
+#btn:hover{
+    scale: 1.15;
+}
+.box:hover{
+    scale: 1.02;
+}
+ul {
+    padding: 15px 20px;
+}
+li:hover {
+    background-color: rgba(237, 232, 232, 0.165);
+}
+.task-item {
+    position: relative;
+    font-size: 19px;
+    padding: 10px 40px 10px 10px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.037);
+    color: #ccffcc;
+    border-radius: 8px;
+    list-style: none;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.task-check {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+.delete-btn {
+    font-size: 28px;
+    color: red;
+    background-color: #ccccccbc;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.task-item:hover .delete-btn,
+.Completed-index:hover .delete-btn {
+    display: flex;
+}
+.btnrel {
+    order: -1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(to right, #56ab2f, #a8e063,lime);
+    color: black;
+    cursor: pointer;
+}
+.r {
+    order: -1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+}
+.Completed-index {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 8px;
+}

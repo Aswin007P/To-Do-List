@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <div id="f">
+        <h1>To-Do List</h1>
+        <img src="https://cdn.pixabay.com/photo/2016/03/31/19/50/checklist-1295319_1280.png" height="70px" onclick="go()">
+    </div>
+    <div id="first">
+        <input type="text" placeholder="Enter Your Task" maxlength="100" id="inp">
+        <button id="btn" onclick="hello()">Add</button>
+    </div>
+    <div id="second">
+        <div class="box" id="green">
+            <h2>Scheduled Task</h2>
+            <ul id="gee"></ul>
+        </div>
+        <div class="box" id="red">
+            <h2>Completed Task</h2>
+            <ul id="fee"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
