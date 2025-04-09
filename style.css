@@ -7,6 +7,8 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 19px;
+    justify-content: center;
+    align-items: center;
 }
 input{cursor: pointer;}
 #fee>li>span{
@@ -25,6 +27,7 @@ body {
     justify-items: center;
     flex-direction: column;
     align-items: center;
+    background-attachment: fixed;
 }
 h1 {
     font-size: 80px;
