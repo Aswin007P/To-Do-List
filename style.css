@@ -134,7 +134,9 @@ li:hover {
     font-style: italic;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
+    min-width: 400px;
+    width: fit-content;
 }
 .task-check {
     margin-right: 8px;
@@ -153,6 +155,7 @@ li:hover {
     height: 28px;
     display: none;
     justify-content: center;
+    margin-left: 20px;
     align-items: center;
     position: absolute;
     right: 10px;
@@ -192,3 +195,30 @@ li:hover {
     gap: 50px;
     padding-bottom: 8px;
 }
+.edit-btn {
+    background-color: #00c2ff;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 8px #00f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 65px; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+.neon   { color: #0b2c47; text-shadow: 0 0 5px #39FF14; }
+
+  .edit-input {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+  }
+  input[type="text"] {
+    cursor: text;
+  }

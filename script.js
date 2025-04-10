@@ -2,6 +2,12 @@ let input = document.getElementById("inp");
 let add = document.getElementById("gee");
 let delet = document.getElementById("fee");
 
+input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      document.getElementById("btn").click();
+    }
+  });
+
 function go(){location.href="https://pixabay.com/images/search/to-do-list%20i/"}
 function hello() {
     if (input.value.trim() === '') {
@@ -19,6 +25,39 @@ function hello() {
     let span = document.createElement("span");
     span.textContent = input.value;
 
+    let editBtn = document.createElement("button");
+    editBtn.textContent = "✂️";
+    editBtn.className = "edit-btn";
+
+    editBtn.onclick = () => {
+        const oldText = span.textContent;
+        const inputEdit = document.createElement("input");
+        inputEdit.type = "text";
+        inputEdit.value = oldText;
+        inputEdit.className = "edit-input";
+    
+        li.replaceChild(inputEdit, span);
+        editBtn.textContent = "➤";
+    
+        editBtn.onclick = () => {
+            const newText = inputEdit.value.trim();
+    
+           
+            if (newText.length > 20) {
+                alert("Please enter less than 20 characters.");
+                return; 
+            }
+    
+            span.textContent = newText === "" ? oldText : newText;
+            li.replaceChild(span, inputEdit);
+            editBtn.textContent = "✂️";
+            editBtn.onclick = originalEditHandler;
+        };
+    };
+    
+    const originalEditHandler = editBtn.onclick;
+
+
     let btn = document.createElement("button");
     btn.innerHTML = "×";
     btn.className = "delete-btn";
@@ -26,6 +65,7 @@ function hello() {
 
     li.appendChild(checkbox);
     li.appendChild(span);
+    li.appendChild(editBtn); 
     li.appendChild(btn);
     add.appendChild(li);
 
