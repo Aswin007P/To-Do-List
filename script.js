@@ -38,6 +38,7 @@ function hello() {
     
         li.replaceChild(inputEdit, span);
         editBtn.textContent = "➤";
+        editBtn.style.backgroundColor="lime";
     
         editBtn.onclick = () => {
             const newText = inputEdit.value.trim();
@@ -51,6 +52,7 @@ function hello() {
             span.textContent = newText === "" ? oldText : newText;
             li.replaceChild(span, inputEdit);
             editBtn.textContent = "✂️";
+            editBtn.style.backgroundColor="#00c2ff";
             editBtn.onclick = originalEditHandler;
         };
     };
