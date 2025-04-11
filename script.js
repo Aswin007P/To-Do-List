@@ -75,10 +75,27 @@ function hello() {
 
     checkbox.onchange = () => {
         if (checkbox.checked) {
+            confetti({
+                particleCount: 150,
+                angle: 60,
+                spread: 100,
+                startVelocity: 60,
+                ticks: 150,
+                origin: { x: 0, y: 1 }
+            });
+            confetti({
+                particleCount: 150,
+                angle: 120,
+                spread: 100,
+                startVelocity: 60,
+                ticks: 150,
+                origin: { x: 1, y: 1 }
+            });    
             li.remove();
             addToCompleted(span.textContent);
         }
     };
+    
 }
 
 function addToCompleted(taskText) {
